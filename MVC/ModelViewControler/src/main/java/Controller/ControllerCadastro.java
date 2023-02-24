@@ -1,21 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controller;
 
-import View.ViewAgendamento;
+import Model.Usuario;
 
-/**
- *
- * @author pedro
- */
-public class ControllerAgendamento {
-    private final ViewAgendamento view;
-    public ControllerAgendamento(ViewAgendamento view){
-        this.view = view;
+public class ControllerCadastro {
+
+    
+
+   public String cadastroUsuario(String nome, String senha){
+        Usuario usuario = new Usuario(nome, senha);
+        return "Usuário cadastrado: " + usuario.getNome();
+
     }
- public void agendamentoFeito(){
-    this.view.mensagem("Agendamento concluído");
- }
+
 }
